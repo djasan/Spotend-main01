@@ -1,9 +1,33 @@
-body {
+@keyframes musicRhythmAnimation {
+    0% {
+      background-color: #2441a0; 
+    }
+    25% {
+      background-color: #0026ff; 
+    }
+    50% {
+      background-color: #5013a0;
+    }
+    75% {
+      background-color: #1c0322; 
+    }
+    100% {
+      background-color: #800020; 
+    }
+  }
+  
+  .music-rhythm {
+    animation: musicRhythmAnimation 1s linear infinite;
+    background-color: rgb(37, 7, 37); /* Couleur de fond souhaitée */
+    /* Autres styles que vous souhaitez appliquer */
+  }
+  
+  body {
     font-family: 'Abyssinica SIL', serif;
-    background-color: #800020; /* Bordeaux */
+    background-color: #194f7a;
     margin: 0;
     padding: 0;
-    color: hsl(0, 29%, 6%); /* Texte en blanc */
+    color: hsl(0, 29%, 6%);
   }
   
   h1 {
@@ -11,7 +35,7 @@ body {
     text-align: center;
     padding: 50px;
     color: black;
-    border: solid 3em blanchedalmond;
+    border: solid 0.3em blanchedalmond;
     border-radius: 30px;
     position: relative;
   }
@@ -19,23 +43,25 @@ body {
   h2 {
     font-family: 'Abyssinica SIL', serif;
     text-align: center;
-    padding: 15px;
-    color: black;
-    border: solid 0.5em blanchedalmond;
+   font-weight: 400;
+    padding: 1.5px;
+    color: #181716;
+    border: solid 0.2em #181716;
     border-radius: 30px;
     position: relative;
   }
   
   p {
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: 400;
     font-family: 'Abyssinica SIL', serif;
     text-align: center;
     padding: 10px;
-    color: #f7f2f2;
-    border: solid 0.5em #181716;
+    color: antiquewhite;
+    border: solid 0.2rem #181716;
     border-radius: 30px;
   }
-  
+ 
   .slides-container {
     display: flex;
     flex-wrap: wrap; /* Permet aux éléments de passer à la ligne en mode bureau */
@@ -54,12 +80,14 @@ body {
   .slides-container img {
     width: 100%;
     border-radius: 20px;
-    border: solid 0.5em blanchedalmond;
+    border: solid 0.5em rgba(14, 5, 63, 0.315);
     flex: 1;
   }
-  .slide{
-    margin-right: 120px; 
+  
+  .slide {
+    margin-right: 120px;
   }
+  
   .slides-container audio {
     width: 100%;
     flex: 1;
@@ -71,6 +99,14 @@ body {
     flex: 1;
   }
   
+  audio.custom-audio-buttons{
+border-radius: 12px;
+background-color: hsl(249, 85%, 28%);
+
+  }
+  audio.custom-audio-buttons:hover{
+background-color: teal;
+  }
   button {
     background-color: hsl(17, 12%, 11%); /* Rouge orangé */
     color: antiquewhite; /* Bordeaux */
@@ -114,5 +150,4 @@ body {
       margin-top: 20px; /* Ajoutez de l'espace en haut */
     }
   }
-  
   

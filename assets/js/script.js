@@ -7,14 +7,40 @@ const prevButton = document.querySelector("#prev");
 const nextButton = document.querySelector("#next");
 const playPause = document.querySelector("#play-pause");
 const audioElement = document.getElementById("audio");
-
+const slides = document.querySelectorAll(".slide");
 let currentTrack = 0;
 let isPlaying = false;
-let track = null;
 let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
 
+audioElement.addEventListener('timeupdate', function() {
+  var currentTime = audioElement.currentTime;
+  const body = document.body;
+  
+  audioElement.addEventListener("play", () => {
+    // Lorsque la musique commence à jouer, ajoutez la classe d'animation
+    body.classList.add("music-rhythm");
+  });
+  
+  audioElement.addEventListener("pause", () => {
+    // Lorsque la musique est en pause, supprimez la classe d'animation
+    body.classList.remove("music-rhythm");
+  });
+  // Définissez ici les moments clés de la chanson (en secondes)
+  var keyMoments = [2, 12, 24, 36, 48, 60, 72]; // Remplacez ... par les moments clés réels
 
+  for (var i = 0; i < keyMoments.length; i++) {
+    if (currentTime >= keyMoments[i] && currentTime < keyMoments[i] + 1) {
+      body.classList.add('music-rhythm');
+    }
+  }
+
+  // Supprimez la classe music-rhythm en dehors des moments clés
+  if (!keyMoments.some(function(moment) {
+    return currentTime >= moment && currentTime < moment + 1;
+  })) {
+    body.classList.remove('music-rhythm');
+  }
+});
 
 function togglePlayPause() {
   if (isPlaying) {
@@ -55,14 +81,17 @@ nextButton.addEventListener("click", () => {
   updatePlayPauseButton();
 });
 
-
-
 slides[currentIndex].querySelector("audio").play();
-
 slider("init");
 audio("init");
 playlist();
 
-
-
-
+function updateSlides() {
+  slides.forEach((slide, index) => {
+    if (index === currentIndex) {
+      slide.style.display = "block";
+    } else {
+      slide.style.display = "none";
+    }
+  });
+}
