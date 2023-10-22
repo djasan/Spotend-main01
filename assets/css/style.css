@@ -1,45 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Alata&family=Josefin+Sans:wght@300&display=swap');
-
-@font-face {
-  font-family: "Abyssinicaserif";
-  src: url(./assets/fonts/Abyssinica_SIL/AbyssinicaSIL-Regular.ttf);
-}
-
-/* L'étoile donne du style à TOUS les éléments */
-/* * {
-  margin: 0;
-  padding: 0;
-  border: 2px solid red;
-} */
-
-
-
-
-
-
 body {
     font-family: 'Abyssinica SIL', serif;
     background-color: #800020; /* Bordeaux */
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: hsl(0, 29%, 6%); /* Texte en blanc */
   }
   
   h1 {
+    font-family: 'Abyssinica SIL', serif;
     text-align: center;
-    padding: 20px;
+    padding: 50px;
     color: black;
     border: solid 3em blanchedalmond;
+    border-radius: 30px;
+    position: relative;
+  }
+  
+  h2 {
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+    padding: 15px;
+    color: black;
+    border: solid 0.5em blanchedalmond;
+    border-radius: 30px;
+    position: relative;
+  }
+  
+  p {
+    font-size: 18px;
+    font-family: 'Abyssinica SIL', serif;
+    text-align: center;
+    padding: 10px;
+    color: #f7f2f2;
+    border: solid 0.5em #181716;
     border-radius: 30px;
   }
   
   .slides-container {
     display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne en mode responsive */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne en mode bureau */
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
   }
   
   .slides-container .info {
@@ -50,21 +53,27 @@ body {
   
   .slides-container img {
     width: 100%;
-    border-radius: 2px;
+    border-radius: 20px;
+    border: solid 0.5em blanchedalmond;
+    flex: 1;
   }
-  
+  .slide{
+    margin-right: 120px; 
+  }
   .slides-container audio {
     width: 100%;
+    flex: 1;
   }
   
   #navigation {
     text-align: center;
     padding: 20px;
+    flex: 1;
   }
   
   button {
     background-color: hsl(17, 12%, 11%); /* Rouge orangé */
-    color:antiquewhite; /* Bordeaux */;
+    color: antiquewhite; /* Bordeaux */
     border: none;
     border-radius: 12px;
     opacity: 1;
@@ -92,7 +101,7 @@ body {
     .slides-container {
       height: auto; /* Ajustez la hauteur en fonction du contenu */
     }
-    
+  
     .slides-container .info {
       max-width: 100%; /* Utilisez toute la largeur disponible */
     }
