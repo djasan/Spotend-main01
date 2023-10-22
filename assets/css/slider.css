@@ -1,0 +1,19 @@
+.slides-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .info {
+    padding: 10px;
+  }
+  
+  audio {
+    width: 100%;
+  }
+  
