@@ -85,10 +85,10 @@ const catalogue = [
   },
 
   {
-    titre: "The Perfect Girl",
-    artiste: "mareux",
+    titre: "When i' m small",
+    artiste: "phantogram.jpg",
     genre: ["pop"],
-    année: 2019,
+    année: 2010,
     cover: "mareux.jpg",
     audio: " The Perfect Girl (Official Music Video).mp3",
     album: "blabla",
