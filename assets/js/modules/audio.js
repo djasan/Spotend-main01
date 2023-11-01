@@ -18,7 +18,7 @@ const audio = (status = "init") => {
       break;
     default:
       console.log("Erreur dans la fonction audio");
-      break;
+    
   }
 };
 export{audio};

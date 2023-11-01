@@ -24,7 +24,7 @@ console.log(catalogue[0].cover); */ //ou console.log(catalogue[0]["cover"]);
         prevSlider();
       break;
     default:
-      break;
+      
   }
 };
 

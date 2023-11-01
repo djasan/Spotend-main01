@@ -1,153 +1,166 @@
 @keyframes musicRhythmAnimation {
-    0% {
-      background-color: #2441a0; 
-    }
-    25% {
-      background-color: #0026ff; 
-    }
-    50% {
-      background-color: #5013a0;
-    }
-    75% {
-      background-color: #1c0322; 
-    }
-    100% {
-      background-color: #800020; 
-    }
+  0% {
+    background-color: #2441a0;
   }
-  
-  .music-rhythm {
-    animation: musicRhythmAnimation 1s linear infinite;
-    background-color: rgb(37, 7, 37); /* Couleur de fond souhaitée */
-    /* Autres styles que vous souhaitez appliquer */
+  25% {
+    background-color: #0026ff;
   }
-  
-  body {
-    font-family: 'Abyssinica SIL', serif;
-    background-color: #194f7a;
-    margin: 0;
-    padding: 0;
-    color: hsl(0, 29%, 6%);
+  50% {
+    background-color: #5013a0;
   }
-  
-  h1 {
-    font-family: 'Abyssinica SIL', serif;
-    text-align: center;
-    padding: 50px;
-    color: black;
-    border: solid 0.3em blanchedalmond;
-    border-radius: 30px;
-    position: relative;
+  75% {
+    background-color: #1c0322;
   }
-  
-  h2 {
-    font-family: 'Abyssinica SIL', serif;
-    text-align: center;
-   font-weight: 400;
-    padding: 1.5px;
-    color: #181716;
-    border: solid 0.2em #181716;
-    border-radius: 30px;
-    position: relative;
+  100% {
+    background-color: #800020;
   }
-  
-  p {
-    font-size: 25px;
-    font-weight: 400;
-    font-family: 'Abyssinica SIL', serif;
-    text-align: center;
-    padding: 10px;
-    color: antiquewhite;
-    border: solid 0.2rem #181716;
-    border-radius: 30px;
-  }
- 
-  .slides-container {
-    display: flex;
-    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne en mode bureau */
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .slides-container .info {
-    flex: 1;
-    padding: 20px;
-    max-width: 50%; /* Limitez la largeur pour les informations */
-  }
-  
-  .slides-container img {
-    width: 100%;
-    border-radius: 20px;
-    border: solid 0.5em rgba(14, 5, 63, 0.315);
-    flex: 1;
-  }
-  
-  .slide {
-    margin-right: 120px;
-  }
-  
-  .slides-container audio {
-    width: 100%;
-    flex: 1;
-  }
-  
-  #navigation {
-    text-align: center;
-    padding: 20px;
-    flex: 1;
-  }
-  
-  audio.custom-audio-buttons{
-border-radius: 12px;
-background-color: hsl(249, 85%, 28%);
+}
 
+.music-rhythm {
+  animation: musicRhythmAnimation 1s linear infinite;
+  background-color: rgb(37, 7, 37);
+  /* Couleur de fond souhaitée */
+  /* Autres styles que vous souhaitez appliquer */
+}
+
+body {
+  font-family: 'Abyssinica SIL', serif;
+  background-color: #0b487a;
+  margin: 0;
+  padding: 0;
+  color: hsl(0, 29%, 6%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  width: 100%;
+  font-family: 'Abyssinica SIL', serif;
+  text-align: center;
+  padding: 50px;
+  color: #fffcfc;
+  border: solid 0.3em blanchedalmond;
+  border-radius: 30px;
+}
+
+h2 {
+  width: 100%;
+  font-family: 'Abyssinica SIL', serif;
+  text-align: center;
+  font-weight: 400;
+  padding: 1.5px;
+  color: #181716;
+  border: solid 0.2em #181716;
+  border-radius: 30px;
+}
+
+p {
+  font-size: 25px;
+  font-weight: 400;
+  font-family: 'Abyssinica SIL', serif;
+  text-align: center;
+  padding: 10px;
+  color: antiquewhite;
+  border: solid 0.2rem #181716;
+  border-radius: 30px;
+}
+
+.slides-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  margin: 20px; /* Add spacing between slides */
+}
+
+.slides-container .info {
+  flex: 1;
+  padding: 20px;
+  max-width: 50%;
+}
+
+.slides-container img {
+  width: 100%;
+  border-radius: 20px;
+  border: solid 0.5em antiquewhite;
+  margin: 20px; /* Add spacing around images */
+}
+
+.slide {
+  margin-right: 120px;
+}
+
+.slides-container audio {
+  width: 100%;
+  flex: 1;
+}
+
+#navigation {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+}
+
+#custom-video {
+  width: 100%;
+  border: solid 0.5em antiquewhite;
+  border-radius: 30px;
+}
+
+audio.custom-audio-buttons {
+  border-radius: 12px;
+  background-color: hsl(249, 85%, 28%);
+}
+
+audio.custom-audio-buttons:hover {
+  background-color: teal;
+}
+
+button {
+  background-color: hsl(17, 12%, 11%);
+  color: antiquewhite;
+  border: none;
+  border-radius: 12px;
+  opacity: 1;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: hsl(0, 100%, 50%);
+}
+
+#play-pause {
+  background-color: hsl(125, 28%, 27%);
+}
+
+#play-pause:hover {
+  background-color: teal;
+}
+
+/* Styles spécifiques pour les écrans de bureau */
+@media screen and (min-width: 576px) {
+  .slides-container {
+    height: auto;
   }
-  audio.custom-audio-buttons:hover{
-background-color: teal;
+
+  .slides-container .info {
+    max-width: 100%;
   }
-  button {
-    background-color: hsl(17, 12%, 11%); /* Rouge orangé */
-    color: antiquewhite; /* Bordeaux */
-    border: none;
-    border-radius: 12px;
-    opacity: 1;
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: background-color 0.3s;
+
+  #slider {
+    flex-direction: row;
   }
-  
-  button:hover {
-    background-color: hsl(0, 100%, 50%); /* Rouge */
+
+  #navigation {
+    margin-top: 20px;
   }
-  
-  #play-pause {
-    background-color: hsl(125, 28%, 27%); /* Vert plus foncé */
-  }
-  
-  #play-pause:hover {
-    background-color: teal;
-  }
-  
-  /* Styles spécifiques pour les écrans de bureau */
-  @media screen and (min-width: 576px) {
-    .slides-container {
-      height: auto; /* Ajustez la hauteur en fonction du contenu */
-    }
-  
-    .slides-container .info {
-      max-width: 100%; /* Utilisez toute la largeur disponible */
-    }
-  
-    #slider {
-      flex-direction: row; /* Rétablissez l'orientation horizontale */
-    }
-  
-    #navigation {
-      margin-top: 20px; /* Ajoutez de l'espace en haut */
-    }
-  }
-  
+}
